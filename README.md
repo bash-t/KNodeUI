@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Additional information:
 the following modues needs to be added:
-`npm install bootstrap ngx-bootstrap ng-pipes --save`
+`npm install bootstrap ng-bootstrap ngx-bootstrap ng-pipes font-awesome --save`
