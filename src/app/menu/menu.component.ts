@@ -9,8 +9,10 @@ export class MenuComponent implements OnInit {
 
   constructor() { }
 
+  isCollapsed: boolean;
+
   ngOnInit() {
-      this.isCollapsed = true;
+    this.isCollapsed = true;
   }
 
 }
