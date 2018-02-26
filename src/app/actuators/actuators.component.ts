@@ -26,6 +26,7 @@ export class ActuatorsComponent implements OnInit {
 
   getActuators(): void {
     this.actuators = this.actuatorService.getActuators();
+      //this.actuators = this.actuatorService.getActuatorsByType('kitchen');
   }
 
   //getActuatorsByType():
