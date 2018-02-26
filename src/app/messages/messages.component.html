@@ -1,0 +1,5 @@
+<div class="container fixed-bottom">
+    <alert [dismissible]="true" type="info" *ngFor="let message of messageService.messages">
+        <strong>Info!</strong> {{message}};
+    </alert>
+</div>

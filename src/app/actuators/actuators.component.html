@@ -1,13 +1,15 @@
-<div class="row" *ngFor="let actuartorrow of actuators | chunkBy:3">
-    <div class="col-md-4 col-sm-12 " *ngFor="let actuator of actuartorrow">
-        <!--<h3 class="card-header">{{actuator.type}}</h3>-->
-        <div class="card">
-            <!--<img class="card-img-top" src="..." alt="Card image cap">-->
-            <div class="card-block">
-                <h4 class="card-title">{{actuator.name}}</h4>
-                <h6 class="card-subtitle mb-2 text-muted">{{actuator.building}} > {{actuator.floor}} > {{actuator.room}}</h6>
-                <p class="card-text">{{actuator.address}}</p>
-                <a href="#" class="btn btn-primary">Toggle</a>
+<div class="container container-fluid">
+    <div class="row" *ngFor="let actuartorrow of actuators | chunkBy:3">
+        <div class="col-md-4 col-sm-12 " *ngFor="let actuator of actuartorrow">
+            <!--<h3 class="card-header">{{actuator.type}}</h3>-->
+            <div class="card">
+                <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+                <div class="card-block">
+                    <h4 class="card-title">{{actuator.name}}</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">{{actuator.building}} > {{actuator.floor}} > {{actuator.room}}</h6>
+                    <p class="card-text">{{actuator.address}}</p>
+                    <a href="#" class="btn btn-primary">Toggle</a>
+                </div>
             </div>
         </div>
     </div>
