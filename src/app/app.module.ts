@@ -9,11 +9,13 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './/app-routing.module';
 import { ActuatorsComponent } from './actuators/actuators.component';
 import { ActuatorService } from './actuator.service';
 import { MenuComponent } from './menu/menu.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
+
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { MessageService } from './message.service';
     BrowserModule,
     NgPipesModule,
     CollapseModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    AppRoutingModule
     //  BsDropdownModule.forRoot()
   ],
   providers: [ActuatorService, MessageService],

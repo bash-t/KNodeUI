@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 import { Actuator } from './actuator';
 import { ACTUATORS } from './config/actuator.config';
 import { MessageService } from './message.service';
@@ -9,9 +11,9 @@ export class ActuatorService {
 
   constructor(private messageService: MessageService) { }
 
-  getActuators(): Actuator[] {
+  getActuators(): Observable<Actuator[]> {
     this.messageService.add('all actuators loaded');
-    return ACTUATORS;
+    return of (ACTUATORS);
   }
 
   getActuatorsByType(type: string): Actuator[] {
