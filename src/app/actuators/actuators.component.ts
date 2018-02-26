@@ -28,19 +28,32 @@ export class ActuatorsComponent implements OnInit {
   actuators: Actuator[];
 
   ngOnInit() {
-    this.getActuators();
+
+    switch (this.route.snapshot.routeConfig.path) {
+      case 'type': {
+        this.getActuators();
+
+        break;
+      }
+      case 'type/:deviceType': {
+        this.getActuatorsByType();
+        break;
+      }
+      default: {
+        this.getActuators();
+        break;
+      }
+    }
+
   }
 
   getActuators(): void {
-    //this.actuators = this.actuatorService.getActuators();
-    //this.actuators = this.actuatorService.getActuatorsByType('kitchen');
     this.actuatorService.getActuators().subscribe(actuators => this.actuators = actuators);
   }
 
   getActuatorsByType(): void {
-  /*const id = +this.route.snapshot.paramMap.get('id');
-  this.actuatorService.getActuators(id)
-    .subscribe(hero => this.hero = hero);*/
-}
+    const deviceType = this.route.snapshot.paramMap.get('deviceType');
+    this.actuatorService.getActuatorsByType(deviceType).subscribe(actuators => this.actuators = actuators);
+  }
 
 }

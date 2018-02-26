@@ -11,15 +11,25 @@ export class ActuatorService {
 
   constructor(private messageService: MessageService) { }
 
-  getActuators(): Observable<Actuator[]> {
-    this.messageService.add('all actuators loaded');
-    return of (ACTUATORS);
+  getDeviceTypes(): String[] {
+    return _.chain(ACTUATORS)
+      .map('type')
+      .uniq()
+      .value();
   }
 
-  getActuatorsByType(type: string): Actuator[] {
-    return _.chain(ACTUATORS)
-        .filter({'room': 'Kueche'})
-      .value();
+  getActuators(): Observable<Actuator[]> {
+    //todo display the message AFTER retrieving data
+    this.messageService.add('all actuators loaded');
+    return of(ACTUATORS);
+  }
+
+  getActuatorsByType(deviceType: string): Observable<Actuator[]> {
+    //todo display the message AFTER retrieving data
+    this.messageService.add(`all ${deviceType} actuators loaded`);
+    return of(_.chain(ACTUATORS)
+      .filter({ 'type': deviceType })
+      .value());
   }
 
 }

@@ -69,7 +69,7 @@ export const ACTUATORS: Actuator[] = [
     "room": "Kueche",
     "building": "HG",
     "floor": "EG",
-    "type": "window",
+    "type": "jalousie",
     "name": "Jalousie",
     "address": "2/0/0"/*,
     "specials": {
@@ -81,7 +81,7 @@ export const ACTUATORS: Actuator[] = [
     "room": "Wohnzimmer",
     "building": "HG",
     "floor": "EG",
-    "type": "light",
+    "type": "jalousie",
     "name": "Decke",
     "address": "0/1/4",
     /*"specials": {
@@ -92,7 +92,7 @@ export const ACTUATORS: Actuator[] = [
     "room": "Wohnzimmer",
     "building": "HG",
     "floor": "EG",
-    "type": "window",
+    "type": "jalousie",
     "name": "Jalousien klein",
     "address": "2/0/4",
     /*"specials": {
@@ -104,7 +104,7 @@ export const ACTUATORS: Actuator[] = [
     "room": "Wohnzimmer",
     "building": "HG",
     "floor": "EG",
-    "type": "window",
+    "type": "jalousie",
     "name": "Jalousie gross",
     "address": "2/0/1",
     /*"specials": {
@@ -116,7 +116,7 @@ export const ACTUATORS: Actuator[] = [
     "room": "Galerie",
     "building": "HG",
     "floor": "OG",
-    "type": "window",
+    "type": "rollo",
     "name": "Rolladen",
     "address": "2/1/1",
     /*"specials": {

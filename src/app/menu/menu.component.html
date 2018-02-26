@@ -30,3 +30,10 @@
         </ul>-->
     </div>
 </nav>
+
+
+<ul class="nav nav-pills">
+  <li class="nav-item" *ngFor="let deviceType of deviceTypes">
+    <a class="nav-link " href="/type/{{deviceType}}">{{deviceType | titleize}}</a>
+  </li>
+</ul>
