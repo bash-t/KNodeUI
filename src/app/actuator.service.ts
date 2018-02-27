@@ -29,7 +29,13 @@ export class ActuatorService {
     this.messageService.add(`all ${deviceType} actuators loaded`);
     return of(_.chain(ACTUATORS)
       .filter({ 'type': deviceType })
-      .value());
+      .sortBy([
+        function(o) { return o.building; },
+        function(o) { return o.floor; },
+        function(o) { return o.room; }
+      ])
+      .value()
+    );
   }
 
 }

@@ -81,7 +81,7 @@ export const ACTUATORS: Actuator[] = [
     "room": "Wohnzimmer",
     "building": "HG",
     "floor": "EG",
-    "type": "jalousie",
+    "type": "light",
     "name": "Decke",
     "address": "0/1/4",
     /*"specials": {
