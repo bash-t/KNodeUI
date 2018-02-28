@@ -27,9 +27,7 @@ export class ActuatorsComponent implements OnInit {
     private repeater: RepeatPipe
   ) { }
 
-  actuators: Actuator[]; //obsolete
-  //actuator$: Observable<Actuator[]>;
-  actuator$: Actuator[];
+  actuators: Actuator[];
   selectedDeviceType: string;
 
   ngOnInit() {
@@ -38,55 +36,15 @@ export class ActuatorsComponent implements OnInit {
       this.selectedDeviceType = params['deviceType'];
       // -- Initialization code -- 
       if (this.selectedDeviceType) {
-        this.getActuatorsByTypeNew();
+        this.actuatorService.getActuatorsByType(this.selectedDeviceType).subscribe(actuators => this.actuators = actuators);
       } else {
-        this.getActuators();
+        this.actuatorService.getActuators().subscribe(actuators => this.actuators = actuators);
       }
     });
 
-    /*this.actuator$ = this.route.paramMap
-    .switchMap((params: ParamMap) => {
-      // (+) before `params.get()` turns the string into a number
-        //this.selectedId = +params.get('id');
-      return this.actuatorService.getActuators()
-    });*/
-
+    /*getActuatorsByType(): void {
+      const deviceType = this.route.snapshot.paramMap.get('deviceType');
+      this.actuatorService.getActuatorsByType(deviceType).subscribe(actuators => this.actuators = actuators);
+    }*/
   }
-
-  /*
-      switch (this.route.snapshot.routeConfig.path) {
-        case 'type/:deviceType': {
-         this.getActuatorsByType();
-             
-            
-          break;
-        }
-          case 'type': {
-          this.getActuators();
-  
-          break;
-        }
-        
-        default: {
-          this.getActuators();
-          break;
-        }
-      }
-  */
-
-
-  getActuatorsByTypeNew(): void {
-    this.actuatorService.getActuatorsByType(this.selectedDeviceType).subscribe(actuators => this.actuator$ = actuators);
-  }
-
-
-  getActuators(): void {
-    this.actuatorService.getActuators().subscribe(actuators => this.actuator$ = actuators);
-  }
-
-  getActuatorsByType(): void {
-    const deviceType = this.route.snapshot.paramMap.get('deviceType');
-    this.actuatorService.getActuatorsByType(deviceType).subscribe(actuators => this.actuators = actuators);
-  }
-
 }

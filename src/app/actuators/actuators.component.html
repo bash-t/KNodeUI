@@ -1,5 +1,5 @@
-<div class="container container-fluid" *ngIf="actuator$">
-    <div class="row" *ngFor="let actuartorrow of actuator$  | chunkBy:3">
+<div class="container container-fluid" *ngIf="actuators">
+    <div class="row" *ngFor="let actuartorrow of actuators | chunkBy:3">
         <div class="col-md-4 col-sm-12 " *ngFor="let actuator of actuartorrow">
             <!--<h3 class="card-header">{{actuator.type}}</h3>-->
             <div class="card">

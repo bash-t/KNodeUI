@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.isCollapsed = true;
     this.getDeviceTypes();
-   // this.getBuildings();
+    //this.getBuildings();
   }
 
   getDeviceTypes(): void {
