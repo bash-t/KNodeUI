@@ -18,6 +18,27 @@ export class ActuatorService {
       .value();
   }
 
+  getBuildings(): String[] {
+    return _.chain(ACTUATORS)
+      .map('building')
+      .uniq()
+      .value();
+  }
+
+  getFloors(): String[] {
+    return _.chain(ACTUATORS)
+      .map('floor')
+      .uniq()
+      .value();
+  }
+
+  getRooms(): String[] {
+    return _.chain(ACTUATORS)
+      .map('room')
+      .uniq()
+      .value();
+  }
+
   getActuators(): Observable<Actuator[]> {
     //todo display the message AFTER retrieving data
     this.messageService.add('all actuators loaded');

@@ -16,24 +16,19 @@
                      <i class="fa fa-sitemap"></i> by Topology
                 </a>
             </li>
-        </ul><!--
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-sitemap"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-star"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-th-list"></i></a>
-            </li>
-        </ul>-->
+        </ul>
     </div>
 </nav>
 
 
 <ul class="nav nav-pills">
   <li class="nav-item" *ngFor="let deviceType of deviceTypes">
-    <a class="nav-link " href="/type/{{deviceType}}">{{deviceType | titleize}}</a>
+    <a class="nav-link " routerLink="/type/{{deviceType}}" routerLinkActive="active">{{deviceType | titleize}}</a>
   </li>
 </ul>
+
+<!--<ul class="nav nav-pills">
+  <li class="nav-item" *ngFor="let building of buildings">
+    <a class="nav-link " routerLink="/type/{{building}}">{{building | titleize}}</a>
+  </li>
+</ul>-->
