@@ -1,28 +1,28 @@
 <div class="container container-fluid" *ngIf="actuators">
     <div class="row" *ngFor="let actuartorrow of actuators | chunkBy:3">
-        <div class="col-md-4 col-sm-12 " *ngFor="let actuator of actuartorrow">
+            <div class="col-md-4 col-sm-12 " *ngFor="let actuator of actuartorrow">
 
-            <span [ngSwitch]="actuator.type">
-                <span *ngSwitchCase="'light'"> 
-                    <app-light [actuator]="actuator"></app-light>
-                </span>
-                
-                <span *ngSwitchCase="'jalousie'"> 
-                    <app-jalousie [actuator]="actuator"></app-jalousie>
-                </span>
-                
-                <span *ngSwitchCase="'rollo'"> 
-                    <app-roller-blind [actuator]="actuator"></app-roller-blind>
-                </span>
-                
-                <span *ngSwitchCase="'heating'"> 
-                    <app-heating [actuator]="actuator"></app-heating>
-                </span>
+                <span [ngSwitch]="actuator.type">
+                    <span *ngSwitchCase="'light'"> 
+                        <app-light [actuator]="actuator"></app-light>
+                    </span>
 
-                <span *ngSwitchDefault>
-                    unknown devicetype: {{actuator.type}}
+                    <span *ngSwitchCase="'jalousie'"> 
+                        <app-jalousie [actuator]="actuator"></app-jalousie>
+                    </span>
+
+                    <span *ngSwitchCase="'rollo'"> 
+                        <app-roller-blind [actuator]="actuator"></app-roller-blind>
+                    </span>
+
+                    <span *ngSwitchCase="'heating'"> 
+                        <app-heating [actuator]="actuator"></app-heating>
+                    </span>
+
+                    <span *ngSwitchDefault>
+                        unknown devicetype: {{actuator.type}}
+                    </span>
                 </span>
-            </span>
-        </div>
+            </div>
     </div>
 </div>

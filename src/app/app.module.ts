@@ -7,7 +7,6 @@ import { NgPipesModule } from 'ng-pipes';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { AlertModule } from 'ngx-bootstrap/alert';
 
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ActuatorsComponent } from './actuators/actuators.component';

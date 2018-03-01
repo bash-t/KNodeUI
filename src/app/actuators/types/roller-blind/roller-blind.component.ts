@@ -4,7 +4,7 @@ import { Actuator } from '../../../actuator';
 @Component({
   selector: 'app-roller-blind',
   templateUrl: './roller-blind.component.html',
-  styleUrls: ['./roller-blind.component.css']
+  styleUrls: ['../../actuators.component.css', './roller-blind.component.css']
 })
 export class RollerBlindComponent implements OnInit {
 

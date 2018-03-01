@@ -4,7 +4,7 @@ import { Actuator } from '../../../actuator';
 @Component({
   selector: 'app-light',
   templateUrl: './light.component.html',
-  styleUrls: ['./light.component.css']
+  styleUrls: ['../../actuators.component.css', './light.component.css']
 })
 export class LightComponent implements OnInit {
 

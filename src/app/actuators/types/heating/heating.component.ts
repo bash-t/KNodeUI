@@ -4,7 +4,7 @@ import { Actuator } from '../../../actuator';
 @Component({
   selector: 'app-heating',
   templateUrl: './heating.component.html',
-  styleUrls: ['./heating.component.css']
+  styleUrls: ['../../actuators.component.css', './heating.component.css']
 })
 export class HeatingComponent implements OnInit {
 
