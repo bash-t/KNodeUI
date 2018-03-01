@@ -15,6 +15,10 @@ import { ActuatorService } from './actuator.service';
 import { MenuComponent } from './menu/menu.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
+import { LightComponent } from './actuators/types/light/light.component';
+import { RollerBlindComponent } from './actuators/types/roller-blind/roller-blind.component';
+import { JalousieComponent } from './actuators/types/jalousie/jalousie.component';
+import { HeatingComponent } from './actuators/types/heating/heating.component';
 
 
 
@@ -23,7 +27,11 @@ import { MessageService } from './message.service';
     AppComponent,
     ActuatorsComponent,
     MenuComponent,
-    MessagesComponent
+    MessagesComponent,
+    LightComponent,
+    RollerBlindComponent,
+    JalousieComponent,
+    HeatingComponent
   ],
   imports: [
     BrowserModule,

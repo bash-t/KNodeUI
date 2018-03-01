@@ -2,7 +2,7 @@ import { Actuator } from '../actuator';
 
 export const ACTUATORS: Actuator[] = [
   {
-    "room": "Buero",
+    "room": "Büro",
     "building": "HG",
     "floor": "KG",
     "type": "light",
@@ -123,5 +123,13 @@ export const ACTUATORS: Actuator[] = [
       "controltype": "rollo",
       "address": "2/0/9"
     }*/
+  },
+    {
+    "room": "Büro",
+    "building": "HG",
+    "floor": "KG",
+    "type": "heating",
+    "name": "Büroheizung",
+    "address": "1/0/0"
   }
 ]

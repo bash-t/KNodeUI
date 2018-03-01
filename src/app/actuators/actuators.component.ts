@@ -10,6 +10,11 @@ import { RepeatPipe } from 'ng-pipes';
 
 import { ActuatorService } from '../actuator.service';
 
+//import { LightComponent } from './types/light/light.component';
+//import { RollerBlindComponent } from './types/roller-blind/roller-blind.component';
+//import { JalousieComponent } from './types/jalousie/jalousie.component';
+//import { HeatingComponent } from './types/heating/heating.component';
+
 
 
 @Component({
@@ -23,8 +28,8 @@ export class ActuatorsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private actuatorService: ActuatorService,
-    private repeater: RepeatPipe
+    private actuatorService: ActuatorService
+    //private repeater: RepeatPipe
   ) { }
 
   actuators: Actuator[];

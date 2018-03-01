@@ -1,16 +1,28 @@
 <div class="container container-fluid" *ngIf="actuators">
     <div class="row" *ngFor="let actuartorrow of actuators | chunkBy:3">
         <div class="col-md-4 col-sm-12 " *ngFor="let actuator of actuartorrow">
-            <!--<h3 class="card-header">{{actuator.type}}</h3>-->
-            <div class="card">
-                <!--<img class="card-img-top" src="..." alt="Card image cap">-->
-                <div class="card-block">
-                    <h4 class="card-title">{{actuator.name}}</h4>
-                    <h6 class="card-subtitle mb-2 text-muted">{{actuator.building}} > {{actuator.floor}} > {{actuator.room}}</h6>
-                    <p class="card-text">{{actuator.address}}</p>
-                    <a href="#" class="btn btn-primary">Toggle</a>
-                </div>
-            </div>
+
+            <span [ngSwitch]="actuator.type">
+                <span *ngSwitchCase="'light'"> 
+                    <app-light [actuator]="actuator"></app-light>
+                </span>
+                
+                <span *ngSwitchCase="'jalousie'"> 
+                    <app-jalousie [actuator]="actuator"></app-jalousie>
+                </span>
+                
+                <span *ngSwitchCase="'rollo'"> 
+                    <app-roller-blind [actuator]="actuator"></app-roller-blind>
+                </span>
+                
+                <span *ngSwitchCase="'heating'"> 
+                    <app-heating [actuator]="actuator"></app-heating>
+                </span>
+
+                <span *ngSwitchDefault>
+                    unknown devicetype: {{actuator.type}}
+                </span>
+            </span>
         </div>
     </div>
 </div>
