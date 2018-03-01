@@ -10,7 +10,15 @@ export class LightComponent implements OnInit {
 
   constructor() { }
 
+  isOn = false; //status of light
+
   ngOnInit() {
+    //todo call service
+  }
+
+  toggleLight(): void {
+    //todo call service, on callback set isOn
+    this.isOn = !this.isOn;
   }
 
   @Input() actuator: Actuator;

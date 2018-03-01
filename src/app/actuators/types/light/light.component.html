@@ -1,17 +1,25 @@
 <!--<h3 class="card-header">{{actuator.type}}</h3>-->
-<div class="card">
+<div class="card" (click)="toggleLight()">
     <!--<img class="card-img-top" src="..." alt="Card image cap">-->
     <div class="card-block">
-        <h4 class="card-title text-warning"><i class="far fa-lightbulb" aria-hidden="true"></i> 
-            {{actuator.name}}</h4>
+        <h4 class="card-title text-warning" *ngIf="isOn">
+            <i class="fas fa-lightbulb" *ngIf="isOn" aria-hidden="true"></i> 
+            {{actuator.name}}
+        </h4>
+        <h4 class="card-title text-info" *ngIf="!isOn">
+            <i class="far fa-lightbulb" *ngIf="!isOn" aria-hidden="true"></i> 
+            {{actuator.name}}
+        </h4>
         <h6 class="card-subtitle mb-2 text-muted">
-            <i class="far fa-building"> {{actuator.building}} </i>
+            <i class="far fa-building"></i> {{actuator.building}} 
             <i class="fas fa-object-ungroup"></i> {{actuator.floor}} 
             <i class="fas fa-object-group"></i> {{actuator.room}}
         </h6>
-        <p class="card-text">{{actuator.address}}</p>
+        <!--<p class="card-text">{{actuator.address}}</p>-->
         <!--<a href="#" class="btn btn-primary">Toggle</a>-->
-        <input type="checkbox" class="checkbox" checked data-toggle="toggle">
+        <!--<input type="checkbox" class="checkbox" checked data-toggle="toggle">-->
+        <!--<button type="button" class="btn btn-primary" (click)="toggleLight()" ng-model="isOn" uib-btn-checkbox btn-checkbox-true="true" btn-checkbox-false="false">
+        Single Toggle</button>-->
     </div>
 </div>
  
